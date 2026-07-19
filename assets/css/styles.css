@@ -1,0 +1,65 @@
+html {
+  color-scheme: light;
+  font-family: "Zen Old Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  line-height: 1.6;
+}
+
+body {
+  max-width: 42rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  color: #111;
+  background: #fff;
+}
+
+footer {
+  margin-bottom: 3rem;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-top: 3rem;
+  font-size: 1rem;
+}
+
+p,
+ul {
+  margin: 0.75rem 0;
+}
+
+a {
+  color: inherit;
+}
+
+.elusive-text-enabled .elusive-character {
+  display: inline-block;
+  opacity: var(--escape-opacity, 1);
+  filter: blur(var(--escape-blur, 0));
+  transform: translate(
+      var(--escape-x, 0),
+      var(--escape-y, 0)
+    ) rotate(var(--escape-rotation, 0));
+  transition:
+    transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 160ms ease,
+    filter 160ms ease;
+  will-change: transform, opacity, filter;
+}
+
+footer {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 40rem) {
+  body {
+    margin: 2rem auto;
+  }
+}
