@@ -39,19 +39,31 @@ a {
   color: inherit;
 }
 
-.elusive-text-enabled .elusive-character {
-  display: inline-block;
-  opacity: var(--escape-opacity, 1);
-  filter: blur(var(--escape-blur, 0));
-  transform: translate(
-      var(--escape-x, 0),
-      var(--escape-y, 0)
-    ) rotate(var(--escape-rotation, 0));
-  transition:
-    transform 140ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    opacity 160ms ease,
-    filter 160ms ease;
-  will-change: transform, opacity, filter;
+.language-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.45rem;
+  margin-bottom: 2rem;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.language-switch-item {
+  min-width: 1.8rem;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #111;
+  text-align: center;
+  text-decoration: none;
+}
+
+.language-switch-current {
+  color: #fff;
+  background: #111;
+}
+
+.language-switch-separator {
+  color: #666;
 }
 
 footer {
